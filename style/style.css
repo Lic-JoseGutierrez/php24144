@@ -1,0 +1,208 @@
+/* etiqueta o tipo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+h3 {
+  text-align: left; /* Alinea todo el contenido del nav a la derecha */
+}
+body {
+  background-color: #181419;
+  color: white;
+}
+nav {
+  background-color: #9f3647;
+  text-align: left;
+  /* margin es del borde hacia afuera */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; /* Asegura que el ancho del nav sea del 100% */
+  position: fixed; /* Hace que el nav se mantenga fijo en la parte superior */
+  top: 0; /* Coloca el nav en la parte superior */
+  z-index: 1000; /* Ajusta el índice z para asegurarte de que esté por encima de otros elementos */
+}
+nav ul {
+  list-style-type: none; /* Elimina los marcadores de lista */
+  padding: 0; /* Elimina el relleno predeterminado de la lista */
+  margin: 0; /* Elimina el margen predeterminado de la lista */
+  margin-bottom: 25px;
+  text-align: right;
+}
+nav li {
+  display: inline; /* Hace que los elementos li se muestren en línea */
+  margin-left: 10px; /* Agrega un espacio entre los elementos li */
+}
+
+/* clases */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  /* margin es del borde hacia afuera */
+  padding: 20px;
+  background-color: #9f3647;
+}
+.column {
+  flex: 1;
+  margin-right: 20px; /* Espacio entre columnas */
+}
+.column:last-child {
+  margin-right: 0; /* Elimina el margen derecho de la última columna */
+}
+.column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.column p {
+  font-size: 14px;
+  color: white;
+}
+.link {
+  color: white;
+  text-decoration: none;
+}
+.hr {
+  color: #9f3647;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.tituloPrincipal {
+  position: absolute;
+  top: 45%; /* Centra verticalmente el texto en relación con el borde superior del contenedor */
+  left: 50%;
+  transform: translate(
+    -50%,
+    -110%
+  ); /* Centra horizontalmente y verticalmente el texto */
+  z-index: 1;
+  color: white;
+  font-size: 55px; /* Ajusta el tamaño de fuente según sea necesario */
+  text-align: center;
+}
+.btn_buscar {
+  padding: 10px 20px;
+  background-color: #9f3647; /* Color del botón */
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  border-color: #181419;
+}
+.btn_mi_cuenta {
+  padding: 10px 20px;
+  background-color: #181419; /* Color del botón */
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  border-color: #181419;
+}
+.input_buscar {
+  padding: 10px 40px;
+  border-radius: 10px;
+  border-color: #181419;
+  margin-top: 20px;
+}
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 900px; /* Ajusta el ancho máximo según sea necesario */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+.container-mas-vendidos {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 0px 40px 0px;
+}
+.image-index {
+  display: flex; /* Utiliza flexbox para alinear las imágenes */
+  flex-wrap: wrap; /* Permite que las imágenes se envuelvan en líneas si no caben en una sola fila */
+  justify-content: space-between; /* Distribuye el espacio entre las imágenes */
+  align-items: flex-start; /* Alinea las imágenes en la parte superior */
+  margin-top: 20px; /* Espacio entre el texto y las imágenes */
+}
+.image-index a {
+  flex: 0 0 calc(33% - 20px); /* Establece el ancho de cada imagen para ocupar el 33% del contenedor con un margen de 20px entre ellas */
+  margin-bottom: 20px; /* Agrega un espacio inferior entre las filas */
+}
+.image-index img {
+  width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+  object-fit: cover; /* Para cubrir el contenedor sin deformar la imagen */
+}
+.image-destacados {
+  display: flex; /* Utiliza flexbox para alinear las imágenes */
+  justify-content: space-between; /* Distribuye el espacio entre las imágenes */
+  margin-top: 20px; /* Espacio entre el texto y las imágenes */
+  flex-wrap: wrap; /* Permite que las imágenes se envuelvan en líneas si no caben en una sola fila */
+}
+.image-destacados a {
+  flex: 0 0 calc(25% - 25px); /* Establece el ancho de cada imagen para ocupar el 25% del contenedor con un padding de 25px */
+  margin-bottom: 25px; /* Agrega un espacio inferior entre las filas */
+}
+.image-destacados img {
+  width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+  object-fit: cover; /* Para cubrir el contenedor sin deformar la imagen */
+}
+.image-mas-vendidos {
+  display: flex; /* Utiliza flexbox para alinear las imágenes */
+  justify-content: space-between; /* Distribuye el espacio entre las imágenes */
+  margin-top: 20px; /* Espacio entre el texto y las imágenes */
+}
+.image-mas-vendidos img {
+  width: 250px; /* Tamaño deseado para las imágenes */
+  height: 270px; /* Establecer la altura igual al ancho */
+  object-fit: cover; /* Para cubrir el contenedor sin deformar la imagen */
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.botonMostrar {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* id */
+#insert-coin {
+  position: relative; /* Para que la posición absoluta del contenido sea relativa a este elemento */
+  width: 100%; /* Ajusta el ancho según sea necesario */
+  height: 600px; /* Ajusta la altura según sea necesario */
+  overflow: hidden; /* Para ocultar el exceso de imagen */
+  margin-bottom: 40px;
+}
+#insert-coin img {
+  position: absolute; /* Para posicionar la imagen absolutamente */
+  top: 0;
+  left: 0;
+  width: 100%; /* Para que la imagen cubra todo el section */
+  height: 100%; /* Para que la imagen cubra todo el section */
+  object-fit: cover; /* Para cubrir todo el área del contenedor */
+  z-index: -1; /* Para que la imagen esté detrás del texto */
+}
+#busqueda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #181419;
+  color: white;
+  margin-bottom: 40px;
+}
+#index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #181419;
+  color: white;
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+#mas-vendidos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #181419;
+  color: white;
+  text-align: center; /* Centra el contenido horizontalmente */
+}
