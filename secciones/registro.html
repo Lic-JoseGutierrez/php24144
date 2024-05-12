@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎮Insert-Coin</title>
+    <!-- vinculacion con css -->
+    <link rel="stylesheet" href="../style/style.css" />
+    <!-- animaciones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- letra -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container_registro">
+    <header>
+      <nav>
+        <ul>
+          <h3 class="animate__animated animate__shakeY">
+            <a href="../index.html" class="link">🎮Insert-Coin</a>
+          </h3>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container_registro_main">
+      <section
+        class="container_registro_form"
+      >
+        <h1 class="registro_form_titulo">Nuevo Usuario</h1>
+
+        <form action="/" class="registro_form">
+          <input
+            type="text"
+            autocomplete="off"
+            class="input_form"
+            placeholder="Nombre"
+            required
+          />
+          <input
+            type="text"
+            autocomplete="off"
+            placeholder="Apellido"
+            class="input_form"
+            required
+          />
+          <input
+            type="email"
+            autocomplete="off"
+            placeholder="Email"
+            class="input_form"
+            required
+          />
+          <input
+            type="password"
+            autocomplete="off"
+            placeholder="Contraseña"
+            class="input_form"
+            required
+          />
+          <input type="date" class="input_form" required />
+          <select name="" id="" class="input_form form_select" required>
+            <option value="" readonly>Seleccione un País</option>
+          </select>
+          
+          <div class="container_form_terminos">
+            <input type="checkbox" autocomplete="off" id="terms" required />
+            <label for="terms" class="form_terminos_texto"
+              >Acepto términos y condiciones</label
+            >
+          </div>
+          <input type="submit" value="Registrarse" class="btn_form" />
+          <a href="./login.html" class="form_link">Ya estás registrado?</a>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
