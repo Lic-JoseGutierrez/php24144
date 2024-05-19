@@ -7,8 +7,8 @@
 }
 h3 {
   color: white;
-  text-align: left; /* Alinea todo el contenido del nav a la derecha */
-  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+  text-align: left; 
+  margin-top: 10px; 
 }
 body {
   background-color: #181419;
@@ -17,40 +17,38 @@ body {
 nav {
   background-color: #848bc0;
   text-align: left;
-  /* margin es del borde hacia afuera */
   margin-left: auto;
   margin-right: auto;
-  width: 100%; /* Asegura que el ancho del nav sea del 100% */
-  position: fixed; /* Hace que el nav se mantenga fijo en la parte superior */
-  top: 0; /* Coloca el nav en la parte superior */
-  z-index: 1000; /* Ajusta el índice z para asegurarte de que esté por encima de otros elementos */
+  width: 100%; 
+  position: fixed; 
+  top: 0; 
+  z-index: 1000; 
 }
 nav ul {
-  list-style-type: none; /* Elimina los marcadores de lista */
-  padding: 0; /* Elimina el relleno predeterminado de la lista */
-  margin: 0; /* Elimina el margen predeterminado de la lista */
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
   margin-bottom: 25px;
   text-align: right;
 }
 nav li {
-  display: inline; /* Hace que los elementos li se muestren en línea */
-  margin-left: 10px; /* Agrega un espacio entre los elementos li */
+  display: inline; 
+  margin-left: 10px; 
 }
 
 /* clases */
 .footer {
   display: flex;
   justify-content: space-between;
-  /* margin es del borde hacia afuera */
   padding: 20px;
   background-color: #848bc0;
 }
 .column {
   flex: 1;
-  margin-right: 20px; /* Espacio entre columnas */
+  margin-right: 20px; 
 }
 .column:last-child {
-  margin-right: 0; /* Elimina el margen derecho de la última columna */
+  margin-right: 0; 
 }
 .column h3 {
   font-size: 18px;
@@ -99,7 +97,7 @@ nav li {
 }
 .btn_mi_cuenta {
   padding: 10px 20px;
-  background-color: #181419; /* Color del botón */
+  background-color: #181419; 
   color: white;
   text-decoration: none;
   border-radius: 10px;
@@ -114,8 +112,8 @@ nav li {
 .container {
   text-align: center;
   width: 100%;
-  max-width: 900px; /* Ajusta el ancho máximo según sea necesario */
-  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  max-width: 900px; 
+  margin: 0 auto; 
 }
 .container-mas-vendidos {
   overflow-x: scroll;
@@ -127,30 +125,30 @@ nav li {
   padding: 0px 0px 40px 0px;
 }
 .image-index-destacados {
-  display: flex; /* Utiliza flexbox para alinear las imágenes */
-  flex-wrap: wrap; /* Permite que las imágenes se envuelvan en líneas si no caben en una sola fila */
-  justify-content: space-between; /* Distribuye el espacio entre las imágenes */
-  align-items: flex-start; /* Alinea las imágenes en la parte superior */
-  margin-top: 20px; /* Espacio entre el texto y las imágenes */
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  align-items: flex-start; 
+  margin-top: 20px; 
 }
 .image-index-destacados a {
-  flex: 0 0 calc(33% - 20px); /* Establece el ancho de cada imagen para ocupar el 33% del contenedor con un margen de 20px entre ellas */
-  margin-bottom: 20px; /* Agrega un espacio inferior entre las filas */
+  flex: 0 0 calc(33% - 20px); 
+  margin-bottom: 20px; 
 }
 .image-index-destacados img {
-  width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
-  height: auto; /* Permite que la altura se ajuste automáticamente */
-  object-fit: cover; /* Para cubrir el contenedor sin deformar la imagen */
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
 }
 .image-mas-vendidos {
-  display: flex; /* Utiliza flexbox para alinear las imágenes */
-  justify-content: space-between; /* Distribuye el espacio entre las imágenes */
-  margin-top: 20px; /* Espacio entre el texto y las imágenes */
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 20px; 
 }
 .image-mas-vendidos img {
-  width: 250px; /* Tamaño deseado para las imágenes */
-  height: 270px; /* Establecer la altura igual al ancho */
-  object-fit: cover; /* Para cubrir el contenedor sin deformar la imagen */
+  width: 250px; 
+  height: 270px; 
+  object-fit: cover; 
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -158,19 +156,17 @@ nav li {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-/* Estilos página de Registro - Login */
+/* Clases de Registro y Login */
 .container_registro {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(to left bottom, #000000, #000000),
     url("../img/fondo1.jpg");
 }
-/* main página de registrarse */
 .container_registro_main {
   position: absolute;
   width: 100%;
 }
-/* contenedor formulario de registro */
 .container_registro_form {
   display: flex;
   justify-content: center;
@@ -183,8 +179,8 @@ nav li {
   border-radius: 10px;
   box-shadow: 0 0 10px 2px #000;
 
-  opacity: 0; /* Comienza con opacidad 0 para que esté oculto */
-  animation: fadeIn 1s forwards; /* Aplica la animación fadeIn */
+  opacity: 0; 
+  animation: fadeIn 1s forwards; 
 }
 @keyframes fadeIn {
   from {
@@ -195,11 +191,9 @@ nav li {
   }
 
 }
-/* titulo de formulario de registro */
 .registro_form_titulo {
   font-size: 2rem;
 }
-/* Formulario de registro */
 .registro_form {
   display: flex;
   flex-direction: column;
@@ -207,7 +201,6 @@ nav li {
   width: 80%;
   margin-top: 40px;
 }
-/* input formulario */
 .input_form {
   font-size: 1.3rem;
   padding: 8px 15px;
@@ -217,37 +210,20 @@ nav li {
   background: transparent;
   color: silver;
 }
-/* color de placeholder del input de fecha  */
-/* .input[type="date"] {
-  color: grey;
-} */
-/* .form_select {
-  font-size: 1rem;
-  color: grey;
-} */
-/* estilos link de formulario */
 .form_link {
   font-size: 0.9rem;
   text-decoration: none;
   color: gray;
-  /* transition: color ease-in-out 500ms; */
 }
-/* efecto hover link */
-/* .form_link:hover {
-  color: rgb(179, 174, 174);
-} */
-/* texto de términos y condiciones */
 .form_terminos_texto {
   font-size: small;
   margin-left: 5px;
   color: silver;
 }
-/* terminos y condiciones */
 .container_form_terminos {
   display: flex;
   align-items: center;
 }
-/* Boton del formulario */
 .btn_form {
   font-size: 1.2rem;
   padding: 10px 5px;
@@ -272,7 +248,7 @@ nav li {
   align-items: center;
   background-color: #181419;
   color: white;
-  text-align: center; /* Centra el contenido horizontalmente */
+  text-align: center; 
 }
 #mas-vendidos {
   display: flex;
@@ -280,7 +256,7 @@ nav li {
   align-items: center;
   background-color: #181419;
   color: white;
-  text-align: center; /* Centra el contenido horizontalmente */
+  text-align: center; 
 }
 #fondo-index {
   display: flex;

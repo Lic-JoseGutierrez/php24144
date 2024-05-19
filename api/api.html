@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🎮Insert-Coin</title>
+    <title>🎮Api</title>
     <!-- vinculacion con css -->
     <link rel="stylesheet" href="../style/style.css" />
     <!-- vinculacion con script -->
@@ -21,7 +21,8 @@
       rel="stylesheet"
     />
   </head>
-  <body class="container_registro">
+
+  <body>
     <header>
       <nav>
         <ul>
@@ -32,29 +33,11 @@
       </nav>
     </header>
 
-    <main class="container_registro_main">
-      <section class="container_registro_form">
-        <h1 class="registro_form_titulo">Mi Cuenta</h1>
-
-        <form action="" class="registro_form" onsubmit="return validarFormularioLogin()">
-          <input
-            type="email"
-            autocomplete="off"
-            placeholder="Email"
-            class="input_form"
-            id="email" 
-          />
-          <input
-            type="password"
-            autocomplete="off"
-            placeholder="Contraseña"
-            class="input_form"
-            id="contraseña" 
-          />
-          <input type="submit" value="Iniciar Sesión" class="btn_form" />
-          <a href="../secciones/registro.html" class="form_link">Registrarse</a>
-        </form>
-      </section>
-    </main>
+    <section id="index-destacados">
+      <div class="image-index-destacados">
+        <div id="container-juegos"></div>
+        <script src="./api.js"></script>
+      </div>
+    </section>
   </body>
 </html>

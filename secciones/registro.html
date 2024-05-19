@@ -6,11 +6,15 @@
     <title>🎮Insert-Coin</title>
     <!-- vinculacion con css -->
     <link rel="stylesheet" href="../style/style.css" />
+    <!-- vinculacion con script -->
+    <script src="../js/script.js"></script>
     <!-- animaciones -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <!-- alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- letra -->
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
@@ -34,48 +38,49 @@
       >
         <h1 class="registro_form_titulo">Nuevo Usuario</h1>
 
-        <form action="/" class="registro_form">
+        <form action="" class="registro_form" onsubmit="return validarFormularioRegistro()">
           <input
             type="text"
             autocomplete="off"
             class="input_form"
             placeholder="Nombre"
-            required
+            id="nombre"
           />
           <input
             type="text"
             autocomplete="off"
             placeholder="Apellido"
             class="input_form"
-            required
+            id="apellido"
           />
           <input
             type="email"
             autocomplete="off"
             placeholder="Email"
             class="input_form"
-            required
+            id="email"
           />
           <input
             type="password"
             autocomplete="off"
             placeholder="Contraseña"
             class="input_form"
-            required
+            id="contraseña"
           />
-          <input type="date" class="input_form" required />
-          <select name="" id="" class="input_form form_select" required>
+          <input type="date" class="input_form" id="fechaNacimiento"/>
+          <select name="" id="pais" class="input_form form_select">
             <option value="" readonly>Seleccione un País</option>
+            <option value="AR" selected>Argentina</option>
           </select>
           
           <div class="container_form_terminos">
-            <input type="checkbox" autocomplete="off" id="terms" required />
+            <input type="checkbox" autocomplete="off" id="terms"/>
             <label for="terms" class="form_terminos_texto"
               >Acepto términos y condiciones</label
             >
           </div>
           <input type="submit" value="Registrarse" class="btn_form" />
-          <a href="./login.html" class="form_link">Ya estás registrado?</a>
+          <a href="./login.html" class="form_link">Iniciar Sesión</a>
         </form>
       </section>
     </main>
