@@ -1,6 +1,6 @@
 // API de GAMER POWER (API de juegos y obsequios gratuitos) https://www.gamerpower.com/
 async function fetchData() {
-    const url = 'https://gamerpower.p.rapidapi.com/api/filter?platform=pc.steam.epic-games-store.ubisoft.gog.itchio.ps4.ps5.xbox-one.xbox-series-xs.switch.android.ios.vr.battlenet.origin.drm-free.xbox360';
+    const url = 'https://gamerpower.p.rapidapi.com/api/filter?platform=pc.steam.ps4.xbox-one.android';
     const options = {
         method: 'GET',
         headers: {
@@ -18,15 +18,25 @@ async function fetchData() {
                 const titulo = juego.title;
                 const imagen = juego.thumbnail;
 
+                // Crear contenedor de tarjeta
+                const cardElemento = document.createElement('div');
+                cardElemento.classList.add('card');
+
+                // Crear elemento de título
                 const tituloElemento = document.createElement('h3');
                 tituloElemento.textContent = titulo;
 
+                // Crear elemento de imagen
                 const imagenElemento = document.createElement('img');
                 imagenElemento.src = imagen;
                 imagenElemento.alt = titulo;
 
-                containerJuegos.appendChild(tituloElemento);
-                containerJuegos.appendChild(imagenElemento);
+                // Agregar título e imagen al contenedor de tarjeta
+                cardElemento.appendChild(imagenElemento);
+                cardElemento.appendChild(tituloElemento);
+
+                // Agregar la tarjeta al contenedor principal
+                containerJuegos.appendChild(cardElemento);
             });
         } else {
             console.log("No se encontraron datos");
@@ -36,7 +46,6 @@ async function fetchData() {
     }
 }
 fetchData();
-
 
 // API de RAWG (API listado de juegos) https://rawg.io/
 // async function fetchData() {
@@ -54,15 +63,25 @@ fetchData();
 //                 const titulo = juego.name;
 //                 const imagen = juego.background_image;
 
+//                 // Crear contenedor de tarjeta
+//                 const cardElemento = document.createElement('div');
+//                 cardElemento.classList.add('card');
+
+//                 // Crear elemento de título
 //                 const tituloElemento = document.createElement('h3');
 //                 tituloElemento.textContent = titulo;
 
+//                 // Crear elemento de imagen
 //                 const imagenElemento = document.createElement('img');
 //                 imagenElemento.src = imagen;
 //                 imagenElemento.alt = titulo;
 
-//                 containerJuegos.appendChild(tituloElemento);
-//                 containerJuegos.appendChild(imagenElemento);
+//                 // Agregar título e imagen al contenedor de tarjeta
+//                 cardElemento.appendChild(imagenElemento);
+//                 cardElemento.appendChild(tituloElemento);
+
+//                 // Agregar la tarjeta al contenedor principal
+//                 containerJuegos.appendChild(cardElemento);
 //             });
 //         } else {
 //             console.log("No se encontraron datos");
@@ -71,5 +90,4 @@ fetchData();
 //         console.error(error);
 //     }
 // }
-
 // fetchData();
