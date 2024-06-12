@@ -71,17 +71,6 @@ h3 {
   height: 100%;
   z-index: -1;
 }
-.fondo-secciones {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.fondo-secciones img {
-  width: 80%;
-  height: 80%;
-  z-index: -1;
-}
 /* BUSQUEDA Y BOTONES */
 #busqueda {
   display: flex;
@@ -400,10 +389,3 @@ h3 {
   justify-content: space-between;
   margin-top: 60px;
 }
-
-/* 2do carrusel */
-.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 60%;
-      margin: auto;
-  }
