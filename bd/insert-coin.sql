@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-06-2024 a las 22:47:27
+-- Tiempo de generación: 18-06-2024 a las 21:07:36
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -78,21 +78,12 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `email`, `contraseña`, `fecha_nac`, `pais`, `telefono`, `dni`, `edad`) VALUES
-(1, 'Jose', 'Gutierrez', 'jose@insert-coin.com', '', '', 'Argentina', 303456, 33333333, 38),
-(2, 'Gabriel', 'Derrier', 'gabriel@insert-coin.com', '', '', 'Argentina', 111333555, 22222222, 40),
-(3, 'Gustavo', 'Freyre', 'gustavo@insert-coin.com', '', '', 'Argentina', 888999666, 33333333, 29),
-(4, 'Gaston', 'Vega', 'gaston@insert-coin.com', '', '', 'Argentina', 888777111, 55555555, 30),
-(5, 'Marcelo', 'Secanell', 'marcelo@insert-coin.com', '', '', 'Argentina', 221333654, 77777777, 25),
-(6, 'Gabriel', 'Morizon', 'gabi@insert-coin.com', '', '', 'Argentina', 222444999, 333111222, 24),
-(7, 'Ivana', 'Coria', 'ivana@insert-coin.com', '', '', 'Argentina', 222111555, 333333333, 28),
-(8, 'Juan Ignacio', 'Marquez', 'juan@insert-coin.com', '', '', 'Argentina', 666888555, 44444444, 26),
-(9, 'Emiliano', 'Moyano', 'emiliano@insert-coin.com', '', '', 'Argentina', 222000111, 555888777, 30),
-(10, 'Esteban', 'Ramallo', 'esteban@insert-coin.com', '', '', 'Argentina', 222000333, 999444222, 29),
-(11, 'Emmanuel', 'Molina', 'emmanuel@insert-coin.com', '', '', 'Argentina', 999888555, 777444111, 21),
-(12, 'Leandro', 'De Greef', 'leandro@insert-coin.com', '', '', 'Argentina', 111333555, 55533322, 33),
-(13, 'Mariano', 'Anadon', 'mariano@insert-coin.com', '', '', 'Argentina', 888777333, 55511100, 27),
-(14, 'Diego', 'Bustos', 'diego@insert-coin.com', '', '', 'Argentina', 222111444, 33355566, 22),
-(15, 'Matias', 'Gentina', 'matias@insert-coin.com', '', '', 'Argentina', 222555777, 33399988, 27);
+(1, 'Admin', '', 'admin@insert-coin.com', '', '', 'Argentina', 303456, 33333333, 30),
+(2, 'Adrian', 'Cairoli', 'adrian@insert-coin.com', '', '', 'Argentina', 111333555, 22222222, 30),
+(3, 'Juan Pablo', 'Piva', 'juan@insert-coin.com', '', '', 'Argentina', 888999666, 33333333, 30),
+(4, 'Walter', 'Ciancio', 'walter@insert-coin.com', '', '', 'Argentina', 888777111, 55555555, 30),
+(5, 'Nicolas', 'Pradines', 'nicolas@insert-coin.com', '', '', 'Argentina', 221333654, 77777777, 30),
+(6, 'Jose', 'Gutierrez', 'jose@insert-coin.com', '', '', 'Argentina', 303456, 33445588, 30);
 
 -- --------------------------------------------------------
 
@@ -171,7 +162,7 @@ ALTER TABLE `empresa`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `videojuegos`

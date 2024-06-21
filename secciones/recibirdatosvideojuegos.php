@@ -1,30 +1,41 @@
 <?php
 
-// echo "Videojuego: " .  $_POST['nombre'];
-// echo "<br>";
-// echo "Descripcion: " .  $_POST['descripcion'];
-// echo "<br>";
-// echo "Genero: " .  $_POST['genero'];
-// echo "<br>";
-// echo "Consola: " .  $_POST['consola'];
-// echo "<br>";
-// echo "Año: " . $_POST['anio'];
-// echo "<br>";
-// echo "Estrellas: " . $_POST['estrellas'];
-// echo "<br>";
-// echo "Empresa: " . $_POST['empresa'];
+// $nombre = isset($_POST['nombre']);
+// $descripcion = isset($_POST['descripcion']);
+// $genero = isset($_POST['genero']);
+// $consola = isset($_POST['consola']);
+// $anio = isset($_POST['anio']);
+// $estrellas = isset($_POST['estrellas']);
+// $empresa = isset($_POST['empresa']);
 
-$nombre = $_POST['nombre'];
-$descripcion = $_POST['descripcion'];
-$genero = $_POST['genero'];
-$consola = $_POST['consola'];
-$anio = $_POST['anio'];
-$estrellas = $_POST['estrellas'];
-$empresa = $_POST['empresa'];
+// ESTO DEBERIA ESTAR SIEMPRE (primer filtro)
+if ($_POST) {
+   
+    //MUESTRA LOS DATOS
+    // var_dump($_POST); 
 
+    $nombre = $_POST['nombre'];
+    $descripcion = $_POST['descripcion'];
+    $genero = $_POST['genero'];
+    $consola = $_POST['consola'];
+    $anio = $_POST['anio'];
+    $estrellas = $_POST['estrellas'];
+    $empresa = $_POST['empresa'];
+
+// validacion con PHP
+if ($nombre == "" || $descripcion == "" || $genero == "" || $consola == "" || $anio == "" || $estrellas == "" || $empresa == "") {
+    // Si al menos uno de los campos está vacío
+    echo '<script>alert("Complete todos los campos.");</script>';
+} else {
+    // Si los campos tienen contenido
+    echo "Los campos están completos.";
+}
+
+}
 ?>
 
 
+<!-- CARD -->
 <!doctype html>
 <html lang="en">
 
@@ -46,7 +57,7 @@ $empresa = $_POST['empresa'];
         <div class="container">
             <!-- Inicio del contenedor de la grilla Bootstrap -->
             <div class="card" style="width: 20rem;">
-                <img src="../img/api.jpg" class="card-img-top" alt="...">
+            <img src="../img/api.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo "Nombre: " . $nombre ?></h5>
                     <p class="card-text"> <?php echo "Descripcion: " . $descripcion ?></p>
@@ -62,26 +73,17 @@ $empresa = $_POST['empresa'];
         </div>
     </center>
 
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
 </body>
 
 </html>
-
-
-<?php
-
-
-/*
-crear formulario de peliculas...
-
-1-nombre
-2-descripcion
-3-genero
-4-calificacion
-5-anio
-6-director (nombre)
-
-a) cuando presione enviar.. deberia mostrarse la informacion en un archivo del tipo php....
-
-*/
-
-?>

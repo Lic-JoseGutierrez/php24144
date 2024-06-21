@@ -8,7 +8,7 @@
   <!-- vinculacion con css -->
   <link rel="stylesheet" href="../style/style.css" />
   <!-- vinculacion con script -->
-  <!-- <script src="../js/script2.js"></script> -->
+  <script src="../js/script2.js"></script>
   <!-- animaciones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!-- alert -->
@@ -32,7 +32,7 @@
     <section class="container_registro_form">
       <h1 class="registro_form_titulo">Registro Videojuegos</h1>
 
-      <form action="recibirdatosvideojuegos.php" method="post" class="registro_form">
+      <form action="recibirdatosvideojuegosJS.php" method="post" class="registro_form" onsubmit="return validarFormularioRegistroVideojuego()">
         <input type="text" autocomplete="off" class="input_form" placeholder="Nombre" id="nombre" name="nombre" />
         <input type="text" autocomplete="off" placeholder="Descripcion" class="input_form" id="descripcion" name="descripcion" />
         <input type="text" autocomplete="off" placeholder="Genero" class="input_form" id="genero" name="genero" />
@@ -44,7 +44,6 @@
       </form>
     </section>
   </main>
-
 </body>
 
 </html>
