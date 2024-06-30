@@ -33,12 +33,14 @@
     </header>
 
     <main class="container_registro_main">
-      <section
-        class="container_registro_form"
-      >
+      <section class="container_registro_form">
         <h1 class="registro_form_titulo">Nuevo Usuario</h1>
 
-        <form action="" class="registro_form" onsubmit="return validarFormularioRegistro()">
+        <form
+          action=""
+          class="registro_form"
+          onsubmit="return validarFormularioRegistro()"
+        >
           <input
             type="text"
             autocomplete="off"
@@ -63,18 +65,38 @@
           <input
             type="password"
             autocomplete="off"
-            placeholder="Contraseña"
+            placeholder="Password"
             class="input_form"
-            id="contraseña"
+            id="password"
           />
-          <input type="date" class="input_form" id="fechaNacimiento"/>
+          <input type="date" class="input_form" id="fechaNacimiento" />
           <select name="" id="pais" class="input_form form_select">
             <option value="" readonly>Seleccione un País</option>
             <option value="AR" selected>Argentina</option>
           </select>
-          
+          <input
+            type="number"
+            autocomplete="off"
+            class="input_form"
+            placeholder="Telefono"
+            id="telefono"
+          />
+          <input
+            type="number"
+            autocomplete="off"
+            class="input_form"
+            placeholder="DNI"
+            id="dni"
+          />
+          <input
+            type="number"
+            autocomplete="off"
+            class="input_form"
+            placeholder="Edad"
+            id="edad"
+          />
           <div class="container_form_terminos">
-            <input type="checkbox" autocomplete="off" id="terms"/>
+            <input type="checkbox" autocomplete="off" id="terms" />
             <label for="terms" class="form_terminos_texto"
               >Acepto términos y condiciones</label
             >

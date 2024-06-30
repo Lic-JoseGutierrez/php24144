@@ -73,23 +73,3 @@ $empresa = isset($_POST['empresa']);
 </body>
 
 </html>
-
-
-<?php
-
-
-/*
-crear formulario de peliculas...
-
-1-nombre
-2-descripcion
-3-genero
-4-calificacion
-5-anio
-6-director (nombre)
-
-a) cuando presione enviar.. deberia mostrarse la informacion en un archivo del tipo php....
-
-*/
-
-?>

@@ -24,6 +24,17 @@
         <h3 class="animate__animated animate__shakeY">
           <a href="../index.html" class="link">🎮Insert-Coin</a>
         </h3>
+        <li><a href="../api/api.html" class="link">🎮Api</a></li>
+        <li>
+          <a href="../secciones/registrovideojuegos.php" class="btn_mi_cuenta" id="mi_cuenta">
+            Registrar videojuego
+          </a>
+        </li>
+        <li>
+          <a href="../secciones/login.html" class="btn_mi_cuenta" id="mi_cuenta">
+            Mi cuenta
+          </a>
+        </li>
       </ul>
     </nav>
   </header>

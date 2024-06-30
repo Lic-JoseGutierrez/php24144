@@ -10,7 +10,7 @@
 
 // ESTO DEBERIA ESTAR SIEMPRE (primer filtro)
 if ($_POST) {
-   
+
     //MUESTRA LOS DATOS
     // var_dump($_POST); 
 
@@ -22,15 +22,14 @@ if ($_POST) {
     $estrellas = $_POST['estrellas'];
     $empresa = $_POST['empresa'];
 
-// validacion con PHP
-if ($nombre == "" || $descripcion == "" || $genero == "" || $consola == "" || $anio == "" || $estrellas == "" || $empresa == "") {
-    // Si al menos uno de los campos está vacío
-    echo '<script>alert("Complete todos los campos.");</script>';
-} else {
-    // Si los campos tienen contenido
-    echo "Los campos están completos.";
-}
-
+    // validacion con PHP
+    if ($nombre == "" || $descripcion == "" || $genero == "" || $consola == "" || $anio == "" || $estrellas == "" || $empresa == "") {
+        // Si al menos uno de los campos está vacío
+        echo '<script>alert("Complete todos los campos.");</script>';
+    } else {
+        // Si los campos tienen contenido
+        echo "Los campos están completos.";
+    }
 }
 ?>
 
@@ -43,46 +42,64 @@ if ($nombre == "" || $descripcion == "" || $genero == "" || $consola == "" || $a
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>🎮Insert-Coin</title>
+    <!-- vinculacion con css -->
+    <link rel="stylesheet" href="../style/style.css" />
+    <!-- vinculacion con script -->
+    <!-- <script src="../js/script2.js"></script> -->
+    <!-- animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- letra -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <title>Videojuegos</title>
 </head>
 
 <body>
-    <center>
-        <h1>Videojuego resgistrado</h1>
 
-        <div class="container">
-            <!-- Inicio del contenedor de la grilla Bootstrap -->
-            <div class="card" style="width: 20rem;">
-            <img src="../img/api.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"> <?php echo "Nombre: " . $nombre ?></h5>
-                    <p class="card-text"> <?php echo "Descripcion: " . $descripcion ?></p>
-                    <p class="card-text"> <?php echo "Genero: " . $genero ?></p>
-                    <p class="card-text"> <?php echo "Consola: " . $consola ?></p>
-                    <p class="card-text"> <?php echo "Año: " . $anio ?></p>
-                    <p class="card-text"> <?php echo "Estrellas: " . $estrellas ?></p>
-                    <p class="card-text"> <?php echo "Empresa: " . $empresa ?></p>
-                    <a href="../index.html" class="btn btn-primary">INICIO</a>
+    <header>
+        <nav>
+            <ul>
+                <h3 class="animate__animated animate__shakeY">
+                    <a href="../index.html" class="link">🎮Insert-Coin</a>
+                </h3>
+                <li><a href="../api/api.html" class="link">🎮Api</a></li>
+                <li>
+                    <a href="../secciones/registrovideojuegos.php" class="btn_mi_cuenta" id="mi_cuenta">
+                        Registrar videojuego
+                    </a>
+                </li>
+                <li>
+                    <a href="../secciones/login.html" class="btn_mi_cuenta" id="mi_cuenta">
+                        Mi cuenta
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container_registro_main">
+        <section class="container_registro_form">
+            <div class="container">
+                <h1 class="registro_form_titulo">Videojuego registrado</h1>
+                <div class="card">
+                    <img src="../img/api.jpg" alt="img">
+                    <div class="card-body">
+                        <h3 class="card"><strong>Nombre:</strong> <?php echo htmlspecialchars($nombre); ?></h3>
+                        <h3 class="card"><strong>Descripción:</strong> <?php echo htmlspecialchars($descripcion); ?></h3>
+                        <h3 class="card"><strong>Género:</strong> <?php echo htmlspecialchars($genero); ?></h3>
+                        <h3 class="card"><strong>Consola:</strong> <?php echo htmlspecialchars($consola); ?></h3>
+                        <h3 class="card"><strong>Año:</strong> <?php echo htmlspecialchars($anio); ?></h3>
+                        <h3 class="card"><strong>Estrellas:</strong> <?php echo htmlspecialchars($estrellas); ?></h3>
+                        <h3 class="card"><strong>Empresa:</strong> <?php echo htmlspecialchars($empresa); ?></h3>
+                        <a href="../index.html" class="btn_card">INICIO</a>
+
+                    </div>
                 </div>
             </div>
-            <!-- Fin del contenedor de la grilla Bootstrap -->
-        </div>
-    </center>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+        </section>
+    </main>
 
 </body>
 
