@@ -15,13 +15,14 @@ if (mysqli_connect_errno()) {
 echo "<br>";
 
 $id = 1;
-$admin = "admin";
+$usuario = "admin";
 $claveUsuario = "123456";
 
-// si la condiciones se cumplen etonces inserta los datos
-if (isset($id) && $nombre == $admin && $password == $claveUsuario) {
+// si existe el id, va a insertar los datos
+// if (isset($id)) {
 
-
+// si la condiciones se cumplen entonces inserta los datos
+if (isset($id) && $usuario == "admin" && $claveUsuario == "123456") {
 
 
     // insertar datos hardcodeado
@@ -42,9 +43,6 @@ if (isset($id) && $nombre == $admin && $password == $claveUsuario) {
     $insertarDatos = "insert into videojuegos(id_videojuego,nombre,descripcion,genero,consola,anio,estrellas,empresa_id) values('$id_videojuego ','$nombre','$descripcion','$genero','$consola','$anio','$estrellas','$empresa_id ')";
 
     mysqli_query($conexion, $insertarDatos);
-}else{
+} else {
     echo "Error... usted no puede insertar datos xq no es administrador";
 }
-
-
-?>

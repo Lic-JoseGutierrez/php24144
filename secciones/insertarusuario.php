@@ -15,38 +15,36 @@ if (mysqli_connect_errno()) {
 echo "<br>";
 
 $id = 1;
-$admin = "admin";
+$usuario = "admin";
 $claveUsuario = "123456";
 
-// si la condiciones se cumplen etonces inserta los datos
-if (isset($id) && $nombre == $admin && $password == $claveUsuario) {
+// si existe el id, va a insertar los datos
+// if (isset($id)) {
 
-
-
+// si la condiciones se cumplen entonces inserta los datos
+if (isset($id) && $usuario == "admin" && $claveUsuario == "123456") {
+    
 
     // insertar datos hardcodeado
     // $insertarDatos = "insert into usuarios(id_usuario,nombre,apellido,email,password,fecha_nac,pais,telefono,dni,edad) values('7','Juan','Perez','juanperez@insert-coin.com','1234','01-01-2000','Argentina','0303456','11133366','30')";
 
     // insertar datos con variables
-    $id_usuario = 9;
-    $nombre = "Marcelo";
+    $id_usuario = 10;
+    $nombre = "Marcela";
     $apellido = "Gomez";
-    $email = "marcelo@insert-coin.com";
+    $email = "marcela@insert-coin.com";
     $password = "1234";
-    $fecha_nac = "01-01-2002";
+    $fecha_nac = "01-01-2003";
     $pais = "Argentina";
-    $telefono = "1155566";
-    $dni = "3354455";
-    $edad = "32";
+    $telefono = "1155569";
+    $dni = "3354459";
+    $edad = "39";
 
     echo "esta todo en true el usuario es administrador", $id;
-    
+
     $insertarDatos = "insert into usuarios(id_usuario,nombre,apellido,email,password,fecha_nac,pais,telefono,dni,edad) values('$id_usuario','$nombre','$apellido','$email','$password','$fecha_nac','$pais','$telefono','$dni','$edad')";
 
     mysqli_query($conexion, $insertarDatos);
-}else{
+} else {
     echo "Error... usted no puede insertar datos xq no es administrador";
 }
-
-
-?>
