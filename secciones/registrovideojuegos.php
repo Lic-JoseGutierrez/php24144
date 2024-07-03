@@ -43,14 +43,15 @@
     <section class="container_registro_form">
       <h1 class="registro_form_titulo">Registro Videojuegos</h1>
 
-      <form action="recibirdatosvideojuegos.php" method="post" class="registro_form">
+      <!-- <form action="recibirdatosvideojuegos.php" method="post" class="registro_form"> -->
+      <form action="insertarvideojuego.php" method="post" class="registro_form">
         <input type="text" autocomplete="off" class="input_form" placeholder="Nombre" id="nombre" name="nombre" />
         <input type="text" autocomplete="off" placeholder="Descripcion" class="input_form" id="descripcion" name="descripcion" />
         <input type="text" autocomplete="off" placeholder="Genero" class="input_form" id="genero" name="genero" />
         <input type="text" autocomplete="off" placeholder="Consola" class="input_form" id="consola" name="consola" />
         <input type="number" autocomplete="off" placeholder="Año" class="input_form" id="anio" name="anio" />
         <input type="number" autocomplete="off" placeholder="Estrellas" class="input_form" id="estrellas" name="estrellas" />
-        <input type="text" autocomplete="off" placeholder="Empresa" class="input_form" id="empresa" name="empresa" />
+        <input type="text" autocomplete="off" placeholder="Empresa" class="input_form" id="empresa_id" name="empresa_id" />
         <input type="submit" value="Registrar videojuego" class="btn_form" />
       </form>
     </section>

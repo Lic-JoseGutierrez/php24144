@@ -29,20 +29,36 @@ if (isset($id) && $usuario == "admin" && $claveUsuario == "123456") {
     // $insertarDatos = "insert into videojuegos(id_videojuego,nombre,descripcion,genero,consola,anio,estrellas,empresa_id) values('16','Winning Eleven 2002','Futbol','Deporte','Playstation','2002','5','2')";
 
     // insertar datos con variables
-    $id_videojuego = 16;
-    $nombre = "Winning Eleven 2002";
-    $descripcion = "Futbol";
-    $genero = "Deporte";
-    $consola = "Playstation";
-    $anio = "2002";
-    $estrellas = "5";
-    $empresa_id  = "2";
+    // $id_videojuego = 16;
+    // $nombre = "Winning Eleven 2002";
+    // $descripcion = "Futbol";
+    // $genero = "Deporte";
+    // $consola = "Playstation";
+    // $anio = "2002";
+    // $estrellas = "5";
+    // $empresa_id  = "2";
 
-    echo "esta todo en true el usuario es administrador", $id;
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Recibir datos del formulario
+        $nombre = $_POST['nombre'];
+        $descripcion = $_POST['descripcion'];
+        $genero = $_POST['genero'];
+        $consola = $_POST['consola'];
+        $anio = $_POST['anio'];
+        $estrellas = $_POST['estrellas'];
+        $empresa_id = $_POST['empresa_id'];
 
-    $insertarDatos = "insert into videojuegos(id_videojuego,nombre,descripcion,genero,consola,anio,estrellas,empresa_id) values('$id_videojuego ','$nombre','$descripcion','$genero','$consola','$anio','$estrellas','$empresa_id ')";
+    echo "esta todo en true el usuario es administrador...", $id;
+
+    $insertarDatos = "INSERT INTO videojuegos(nombre,descripcion,genero,consola,anio,estrellas,empresa_id) values('$nombre','$descripcion','$genero','$consola','$anio','$estrellas','$empresa_id')";
 
     mysqli_query($conexion, $insertarDatos);
+    echo"<br>";
+    echo "Nuevo videojuego registrado correctamente";
 } else {
-    echo "Error... usted no puede insertar datos xq no es administrador";
+    echo "Error: " . $insertarDatos . "<br>" . mysqli_error($conexion);
+    // echo "Error... usted no puede insertar datos xq no es administrador";
 }
+}
+mysqli_close($conexion);
+?>

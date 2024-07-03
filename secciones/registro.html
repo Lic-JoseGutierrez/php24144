@@ -37,12 +37,14 @@
         <h1 class="registro_form_titulo">Nuevo Usuario</h1>
 
         <form
-          action=""
+          action="insertarusuario.php"
+          method="post"
           class="registro_form"
           onsubmit="return validarFormularioRegistro()"
         >
           <input
             type="text"
+            name="nombre"
             autocomplete="off"
             class="input_form"
             placeholder="Nombre"
@@ -50,6 +52,7 @@
           />
           <input
             type="text"
+            name="apellido"
             autocomplete="off"
             placeholder="Apellido"
             class="input_form"
@@ -57,6 +60,7 @@
           />
           <input
             type="email"
+            name="email"
             autocomplete="off"
             placeholder="Email"
             class="input_form"
@@ -64,18 +68,25 @@
           />
           <input
             type="password"
+            name="password"
             autocomplete="off"
             placeholder="Password"
             class="input_form"
             id="password"
           />
-          <input type="date" class="input_form" id="fechaNacimiento" />
-          <select name="" id="pais" class="input_form form_select">
+          <input
+            type="date"
+            name="fechaNacimiento"
+            class="input_form"
+            id="fechaNacimiento"
+          />
+          <select name="pais" id="pais" class="input_form form_select">
             <option value="" readonly>Seleccione un País</option>
             <option value="AR" selected>Argentina</option>
           </select>
           <input
             type="number"
+            name="telefono"
             autocomplete="off"
             class="input_form"
             placeholder="Telefono"
@@ -83,6 +94,7 @@
           />
           <input
             type="number"
+            name="dni"
             autocomplete="off"
             class="input_form"
             placeholder="DNI"
@@ -90,13 +102,14 @@
           />
           <input
             type="number"
+            name="edad"
             autocomplete="off"
             class="input_form"
             placeholder="Edad"
             id="edad"
           />
           <div class="container_form_terminos">
-            <input type="checkbox" autocomplete="off" id="terms" />
+            <input type="checkbox" name="terms" autocomplete="off" id="terms" />
             <label for="terms" class="form_terminos_texto"
               >Acepto términos y condiciones</label
             >
