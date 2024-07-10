@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])) {
+   
+  header('Location: ../pages/login.php');
+  exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,17 +30,26 @@
     <nav>
       <ul>
         <h3 class="animate__animated animate__shakeY">
-          <a href="../index.html" class="link">🎮Insert-Coin</a>
+          <a href="../index.php" class="link">🎮Insert-Coin</a>
         </h3>
-        <li><a href="../api/api.html" class="link">🎮Api</a></li>
         <li>
-          <a href="../secciones/registrovideojuegos.php" class="btn_mi_cuenta" id="mi_cuenta">
-            Registrar videojuego
+          <a href="../api/api.php" class="link" title="API">
+            <img width="45" height="45" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-api-computer-science-flaticons-lineal-color-flat-icons-4.png" alt="external-api-computer-science-flaticons-lineal-color-flat-icons-4" />
           </a>
         </li>
         <li>
-          <a href="../secciones/login.html" class="btn_mi_cuenta" id="mi_cuenta">
-            Mi cuenta
+          <a href="../pages/registrovideojuegos.php" class="link" id="logout" title="REGISTRAR JUEGO">
+            <img width="48" height="48" src="https://img.icons8.com/doodle/48/gaming.png" alt="gaming" />
+          </a>
+        </li>
+        <li>
+          <a href="../pages/mostrarusuario.php" class="link" id="mostrarusuario" title="ADMINISTRAR USUARIOS">
+            <img width="48" height="48" src="https://img.icons8.com/doodle/48/group--v1.png" alt="group--v1" />
+          </a>
+        </li>
+        <li>
+          <a href="../pages/logout.php" class="link" id="logout" title="LOGOUT">
+            <img width="50" height="50" src="https://img.icons8.com/pastel-glyph/64/shutdown--v4.png" alt="shutdown--v4" />
           </a>
         </li>
       </ul>
@@ -41,17 +58,18 @@
 
   <main class="container_registro_main">
     <section class="container_registro_form">
-      <h1 class="registro_form_titulo">Registro Videojuegos</h1>
+      <h1 class="registro_form_titulo">Nuevo Juego</h1>
 
-      <form action="recibirdatosvideojuegosJS.php" method="post" class="registro_form" onsubmit="return validarFormularioRegistroVideojuego()">
+      <form action="insertarvideojuego.php" method="post" class="registro_form" onsubmit="return validarFormularioRegistroVideojuego()">
         <input type="text" autocomplete="off" class="input_form" placeholder="Nombre" id="nombre" name="nombre" />
         <input type="text" autocomplete="off" placeholder="Descripcion" class="input_form" id="descripcion" name="descripcion" />
         <input type="text" autocomplete="off" placeholder="Genero" class="input_form" id="genero" name="genero" />
         <input type="text" autocomplete="off" placeholder="Consola" class="input_form" id="consola" name="consola" />
         <input type="number" autocomplete="off" placeholder="Año" class="input_form" id="anio" name="anio" />
         <input type="number" autocomplete="off" placeholder="Estrellas" class="input_form" id="estrellas" name="estrellas" />
-        <input type="text" autocomplete="off" placeholder="Empresa" class="input_form" id="empresa" name="empresa" />
-        <input type="submit" value="Registrar videojuego" class="btn_form" />
+        <input type="number" autocomplete="off" placeholder="Empresa" class="input_form" id="empresa_id" name="empresa_id" />
+        <input type="submit" value="Registrar juego" class="btn_form" />
+        <a href="../pages/mostrarvideojuego.php" class="form_link">Administrador de juegos</a>
       </form>
     </section>
   </main>

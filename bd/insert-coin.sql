@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-06-2024 a las 21:07:36
+-- Tiempo de generación: 10-07-2024 a las 02:23:01
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -65,8 +65,8 @@ CREATE TABLE `usuarios` (
   `nombre` varchar(30) NOT NULL,
   `apellido` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `contraseña` varchar(20) NOT NULL,
-  `fecha_nac` varchar(10) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `fechaNacimiento` varchar(10) NOT NULL,
   `pais` varchar(30) NOT NULL,
   `telefono` int(11) NOT NULL,
   `dni` int(11) NOT NULL,
@@ -77,13 +77,13 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `email`, `contraseña`, `fecha_nac`, `pais`, `telefono`, `dni`, `edad`) VALUES
-(1, 'Admin', '', 'admin@insert-coin.com', '', '', 'Argentina', 303456, 33333333, 30),
-(2, 'Adrian', 'Cairoli', 'adrian@insert-coin.com', '', '', 'Argentina', 111333555, 22222222, 30),
-(3, 'Juan Pablo', 'Piva', 'juan@insert-coin.com', '', '', 'Argentina', 888999666, 33333333, 30),
-(4, 'Walter', 'Ciancio', 'walter@insert-coin.com', '', '', 'Argentina', 888777111, 55555555, 30),
-(5, 'Nicolas', 'Pradines', 'nicolas@insert-coin.com', '', '', 'Argentina', 221333654, 77777777, 30),
-(6, 'Jose', 'Gutierrez', 'jose@insert-coin.com', '', '', 'Argentina', 303456, 33445588, 30);
+INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `email`, `password`, `fechaNacimiento`, `pais`, `telefono`, `dni`, `edad`) VALUES
+(1, 'Admin', 'Admin', 'admin@insert-coin.com', '123456', '2000-01-01', 'Argentina', 111111, 111111, 24),
+(2, 'Adrian', 'Cairoli', 'adrian@insert-coin.com', '222222', '2000-01-01', 'Argentina', 222222, 222222, 24),
+(3, 'Juan Pablo', 'Piva', 'juan@insert-coin.com', '333333', '2000-01-01', 'Argentina', 333333, 333333, 24),
+(4, 'Walter', 'Ciancio', 'walter@insert-coin.com', '444444', '2000-01-01', 'Argentina', 444444, 444444, 24),
+(5, 'Nicolas', 'Pradines', 'nicolas@insert-coin.com', '555555', '2000-01-01', 'Argentina', 555555, 555555, 24),
+(6, 'Jose', 'Gutierrez', 'jose@insert-coin.com', '666666', '2000-01-01', 'Argentina', 666666, 666666, 24);
 
 -- --------------------------------------------------------
 
@@ -107,7 +107,7 @@ CREATE TABLE `videojuegos` (
 --
 
 INSERT INTO `videojuegos` (`id_videojuego`, `nombre`, `descripcion`, `genero`, `consola`, `anio`, `estrellas`, `empresa_id`) VALUES
-(1, 'Call of Duty Modern Warfare', 'Posee un modo multijugador en línea con variados modos de juego y distintos mapas', 'Shooter', 'Playstation - Xbox - PC', 2019, 5, 1),
+(1, 'Call of Duty Modern Warfare', 'Posee un modo multijugador en línea con variados modos de juego y distintos mapas', 'Shooter', 'Playstation - Xbox - PC', 2019, 5, 2),
 (2, 'eFootbal 2024', 'Es es un videojuego de simulación de fútbol desarrollado por Konami Digital Entertainment.', 'Deporte', 'PC - Playstation - Xbox', 2023, 5, 2),
 (3, 'Horizon Zero Dawn', 'Es un videojuego de acción, aventura y de mundo abierto desarrollado por Guerrilla Games.', 'Aventura', 'Playstation - PC', 2017, 4, 3),
 (4, 'Rocket League', 'Es un videojuego que combina el fútbol con los vehículos. Fue desarrollado por Psyonix. ', 'Deporte', 'Playstation - PC - Xbox - Nintendo Swich', 2015, 4, 4),
@@ -121,7 +121,7 @@ INSERT INTO `videojuegos` (`id_videojuego`, `nombre`, `descripcion`, `genero`, `
 (12, 'Assassin Creed Valhalla', 'Durante la invasión de Gran Bretaña por parte de los vikingos, con el jugador controlando al guerrero vikingo Eivor.', 'Pelea', 'Playstation - PC - Xbox', 2020, 5, 11),
 (13, 'Shadow of the Colossus', 'Trata de un joven,  que debe viajar a caballo a través de un vasto territorio y derrotar a 16 gigantes, para devolver la vida a una joven.', 'Aventura', 'Playstation', 2005, 3, 12),
 (14, 'Need for speed payback', 'Es un videojuego de carreras de mundo abierto.', 'Carrera', 'Playstation - PC - Xbox', 2017, 3, 13),
-(15, 'GTA 5', 'Michael Townley, Trevor Philips y Brad Snider eran ladrones de bancos que vivían en Ludendorff. Michael, planea un atraco falso.', 'Accion', 'Playstation - PC - Xbox', 2013, 3, 14);
+(15, 'GTA 5', 'Michael Townley, Trevor Philips y Brad Snider eran ladrones de bancos que vivían en Ludendorff. Michael, planea un atraco falso.', 'Accion', 'Playstation - PC - Xbox', 2013, 4, 14);
 
 --
 -- Índices para tablas volcadas

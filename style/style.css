@@ -45,9 +45,23 @@ h3 {
 .titulo {
   z-index: 1;
   color: white;
-  font-size: 2vw;
   text-align: center;
   position: absolute;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.titulo h1 {
+  font-size: 3vw; 
+  margin: 0;
+  line-height: 1.2;
+  word-wrap: break-word; 
+}
+/* AJUSTE PARA DISPOSITIVOS MOVILES */
+@media (max-width: 480px) {
+  .titulo h1 {
+    font-size: 6vw;
+  }
 }
 .link {
   color: white;
@@ -65,6 +79,7 @@ h3 {
   align-items: center;
   position: relative;
   background-color: #181419;
+  padding-top: 80px;
 }
 #fondo-index img {
   width: 100%;
@@ -94,13 +109,14 @@ h3 {
   border-radius: 10px;
   border-color: #181419;
 }
-.btn_mi_cuenta {
+.btn_logout {
   padding: 10px 20px;
   background-color: #181419;
   color: white;
   text-decoration: none;
   border-radius: 10px;
   border-color: #181419;
+  margin-right: 10px;
 }
 .btn_mostrar {
   margin-top: 30px;
@@ -164,12 +180,11 @@ h3 {
   margin-top: 20px;
 }
 .image-mas-vendidos img {
-  width: 250px;
-  height: 270px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 30px;
+  padding-right: 5px;
+  border-radius: 15px;
 }
 /* FOOTER */
 .footer {
@@ -194,12 +209,12 @@ h3 {
   font-size: 14px;
   color: white;
 }
-/* REGISTRO Y LOGIN */
-.container_registro {
+/* REGISTRO Y LOGIN OPCION A*/
+/* .container_registro {
   background-repeat: repeat;
   background-size: cover;
-  background-image: linear-gradient(to left bottom, #000000, #000000),
-    url("../img/fondo1.jpg");
+  background-image: linear-gradient(to left bottom, #181419, #181419),
+  url("/proyecto_front/img/fondo1.jpg"); 
 }
 .container_registro_main {
   position: absolute;
@@ -211,12 +226,12 @@ h3 {
   flex-direction: column;
   align-items: center;
   background-color: #222222;
-  width: 30%;
+  width: 80%;
+  max-width: 500px;
   margin: 9rem auto 5rem auto;
   padding: 20px 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px 2px #000;
-  /* ANIMACION - REGISTRO Y LOGIN*/
   opacity: 0;
   animation: fadeIn 1s forwards;
 }
@@ -246,6 +261,7 @@ h3 {
   border: 2px solid #848bc0;
   background: transparent;
   color: silver;
+   
 }
 .form_link {
   font-size: 0.9rem;
@@ -256,6 +272,7 @@ h3 {
   font-size: small;
   margin-left: 5px;
   color: silver;
+  
 }
 .container_form_terminos {
   display: flex;
@@ -266,7 +283,81 @@ h3 {
   padding: 10px 5px;
   border-radius: 10px;
   background-color: #848bc0;
-  color: white;
+  color: silver;
+  border: none;
+} */
+/* REGISTRO Y LOGIN OPCION B*/
+.container_registro {
+  background-repeat: repeat;
+  background-size: cover;
+  background-color: #181419;
+}
+.container_registro_main {
+  position: absolute;
+  width: 100%;
+}
+.container_registro_form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #848bc0;
+  width: 80%;
+  max-width: 500px;
+  margin: 9rem auto 5rem auto;
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px #000;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.registro_form_titulo {
+  font-size: 2rem;
+}
+.registro_form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 80%;
+  margin-top: 40px;
+}
+.input_form {
+  font-size: 1.3rem;
+  padding: 8px 15px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #181419;
+  background: silver;
+  color: #181419;
+}
+.form_link {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #181419;
+}
+.form_terminos_texto {
+  font-size: small;
+  margin-left: 5px;
+  color: #181419;
+}
+.container_form_terminos {
+  display: flex;
+  align-items: center;
+}
+.btn_form {
+  font-size: 1.2rem;
+  padding: 10px 5px;
+  border-radius: 10px;
+  background-color: #181419;
+  color: silver;
   border: none;
 }
 /* ANIMACION - EN STOCK */
@@ -376,7 +467,7 @@ h3 {
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
 }
-/* CARDS - API*/
+/* CARDS */
 .card {
   flex-basis: calc(25% - 20px);
   margin-bottom: 20px;
@@ -396,4 +487,24 @@ h3 {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 60px;
+}
+/* TABLA CONSULTAS BBDD */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.data-table th, .data-table td {
+  border: 2px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.data-table th {
+  background-color: #f2f2f2;
+}
+.data-table tbody tr:nth-child(even) {
+  background-color: #181419;
+}
+.data-table tbody tr:hover {
+  background-color: #848bc0;
 }

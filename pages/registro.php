@@ -26,8 +26,9 @@
       <nav>
         <ul>
           <h3 class="animate__animated animate__shakeY">
-            <a href="../index.html" class="link">🎮Insert-Coin</a>
+            <a href="../index.php" class="link">🎮Insert-Coin</a>
           </h3>
+          
         </ul>
       </nav>
     </header>
@@ -82,7 +83,7 @@
           />
           <select name="pais" id="pais" class="input_form form_select">
             <option value="" readonly>Seleccione un País</option>
-            <option value="AR" selected>Argentina</option>
+            <option value="Argentina" selected>Argentina</option>
           </select>
           <input
             type="number"
@@ -115,7 +116,7 @@
             >
           </div>
           <input type="submit" value="Registrarse" class="btn_form" />
-          <a href="./login.html" class="form_link">Iniciar Sesión</a>
+          <a href="./login.php" class="form_link">Iniciar Sesión</a>
         </form>
       </section>
     </main>
