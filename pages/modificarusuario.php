@@ -77,29 +77,27 @@ mysqli_close($conexion);
             <form action="modificarusuario2.php" method="post" class="registro_form" onsubmit="return validarFormularioRegistro()">
                 <input type="hidden" name="id_usuario" value="<?php echo $datos['id_usuario']; ?>" />
 
-                <input type="text" name="nombre" value="<?php echo $datos['nombre']; ?>" autocomplete="off" class="input_form" placeholder="Nombre" id="nombre" />
+                <input type="text" name="nombre" value="<?php echo $datos['nombre']; ?>" autocomplete="off" class="input_form" placeholder="Nombre" id="nombre" required/>
 
-                <input type="text" name="apellido" value="<?php echo $datos['apellido']; ?>" autocomplete="off" placeholder="Apellido" class="input_form" id="apellido" />
+                <input type="text" name="apellido" value="<?php echo $datos['apellido']; ?>" autocomplete="off" placeholder="Apellido" class="input_form" id="apellido" required/>
 
-                <input type="email" name="email" value="<?php echo $datos['email']; ?>" autocomplete="off" placeholder="Email" class="input_form" id="email" />
+                <input type="email" name="email" value="<?php echo $datos['email']; ?>" autocomplete="off" placeholder="Email" class="input_form" id="email" required/>
 
-                <input type="password" name="password" value="<?php echo $datos['password']; ?>" autocomplete="off" placeholder="Password" class="input_form" id="password" />
+                <input type="password" name="password" value="<?php echo $datos['password']; ?>" autocomplete="off" placeholder="Password" class="input_form" id="password" required/>
 
-                <input type="date" name="fechaNacimiento" value="<?php echo $datos['fechaNacimiento']; ?>" class="input_form" id="fechaNacimiento" />
+                <input type="date" name="fechaNacimiento" value="<?php echo $datos['fechaNacimiento']; ?>" class="input_form" id="fechaNacimiento" required/>
 
-                <select name="pais" id="pais" class="input_form form_select">
+                <select name="pais" id="pais" class="input_form form_select" required>
                     <option value="" readonly>Seleccione un País</option>
                     <option value="Argentina" <?php if ($datos['pais'] == 'Argentina') echo 'selected'; ?>>Argentina</option>
                 </select>
 
-                <input type="number" name="telefono" value="<?php echo $datos['telefono']; ?>" autocomplete="off" class="input_form" placeholder="Telefono" id="telefono" />
+                <input type="number" name="telefono" value="<?php echo $datos['telefono']; ?>" autocomplete="off" class="input_form" placeholder="Telefono" id="telefono" min="1000000" max="999999999999999" required/>
 
-                <input type="number" name="dni" value="<?php echo $datos['dni']; ?>" autocomplete="off" class="input_form" placeholder="DNI" id="dni" />
-
-                <input type="number" name="edad" value="<?php echo $datos['edad']; ?>" autocomplete="off" class="input_form" placeholder="Edad" id="edad" />
+                <input type="number" name="dni" value="<?php echo $datos['dni']; ?>" autocomplete="off" class="input_form" placeholder="DNI" id="dni" min="1000000" max="99999999" required/>
 
                 <div class="container_form_terminos">
-                    <input type="checkbox" name="terms" autocomplete="off" id="terms" />
+                    <input type="checkbox" name="terms" autocomplete="off" id="terms" required/>
                     <label for="terms" class="form_terminos_texto">Acepto términos y condiciones</label>
                 </div>
 

@@ -1,9 +1,9 @@
 <?php
 session_start();
 if (!isset($_SESSION['usuario'])) {
-     
-    header('Location: ../pages/login.php');
-    exit();
+
+  header('Location: ../pages/login.php');
+  exit();
 }
 ?>
 <!DOCTYPE html>
@@ -49,18 +49,41 @@ if (isset($id) && $usuario == "admin" && $claveUsuario == "123456") {
       die("ERROR: No se pudo conectar a la base de datos: " . mysqli_connect_error());
     }
 
-    $id_usuario = mysqli_real_escape_string($conexion, $_POST['id_usuario']);
-    $nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
-    $apellido = mysqli_real_escape_string($conexion, $_POST['apellido']);
-    $email = mysqli_real_escape_string($conexion, $_POST['email']);
-    $password = mysqli_real_escape_string($conexion, $_POST['password']);
-    $fechaNacimiento = mysqli_real_escape_string($conexion, $_POST['fechaNacimiento']);
-    $pais = mysqli_real_escape_string($conexion, $_POST['pais']);
-    $telefono = mysqli_real_escape_string($conexion, $_POST['telefono']);
-    $dni = mysqli_real_escape_string($conexion, $_POST['dni']);
-    $edad = mysqli_real_escape_string($conexion, $_POST['edad']);
+    $id_usuario = $_POST['id_usuario'];
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $fechaNacimiento = $_POST['fechaNacimiento'];
+    $pais = $_POST['pais'];
+    $telefono = $_POST['telefono'];
+    $dni = $_POST['dni'];
 
-    $consulta = "UPDATE usuarios SET 
+    // Obtener la fecha actual
+    $fecha_actual = date("Y-m-d");
+
+    // Comparar edades
+    $edad_minima = 18;
+
+    // Calcular la diferencia en años
+    $diff = date_diff(date_create($fechaNacimiento), date_create($fecha_actual));
+    $edad_persona = $diff->y;  // Obtiene la diferencia en años
+
+    if ($edad_persona < $edad_minima) {
+      echo "<script>
+                 Swal.fire({
+                   title: 'Debe ser mayor de 18 años para registrarse.',
+                   icon: 'error',
+                   confirmButtonText: 'OK'
+                 }).then((result) => {
+                 if (result.isConfirmed) {
+                    window.location.href = 'mostrarusuario.php';
+                  } 
+                 });
+              </script>";
+    } else {
+
+      $consulta = "UPDATE usuarios SET 
                 nombre='$nombre', 
                 apellido='$apellido', 
                 email='$email', 
@@ -68,12 +91,11 @@ if (isset($id) && $usuario == "admin" && $claveUsuario == "123456") {
                 fechaNacimiento='$fechaNacimiento', 
                 pais='$pais', 
                 telefono='$telefono', 
-                dni='$dni', 
-                edad='$edad' 
+                dni='$dni' 
                 WHERE id_usuario='$id_usuario'";
 
-    if (mysqli_query($conexion, $consulta)) {
-      echo "<script>
+      if (mysqli_query($conexion, $consulta)) {
+        echo "<script>
                  Swal.fire({
                    title: 'Modificación exitosa',
                    text: 'El usuario con Id $id_usuario fue modificado correctamente.',
@@ -85,13 +107,11 @@ if (isset($id) && $usuario == "admin" && $claveUsuario == "123456") {
                    }
                  });
               </script>";
-    } else {
-      echo "Error al actualizar los datos: " . mysqli_error($conexion);
+      } else {
+        echo "Error al actualizar los datos: " . mysqli_error($conexion);
+      }
     }
-
-    mysqli_close($conexion);
-  } else {
-    echo "Acceso no permitido.";
   }
 }
+mysqli_close($conexion);
 ?>

@@ -85,7 +85,6 @@ echo "Consulta de usuarios";
                 <td>Pais</td>
                 <td>Telefono</td>
                 <td>DNI</td>
-                <td>Edad</td>
             </tr>
 
             <?php
@@ -99,7 +98,6 @@ echo "Consulta de usuarios";
     <td>",  $datos['pais'],  "</td>
     <td>",  $datos['telefono'],  "</td>
     <td>",  $datos['dni'],  "</td>
-    <td>",  $datos['edad'],  "</td>
     </tr>";
             }
 

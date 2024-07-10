@@ -61,13 +61,13 @@ if (!isset($_SESSION['usuario'])) {
       <h1 class="registro_form_titulo">Nuevo Juego</h1>
 
       <form action="insertarvideojuego.php" method="post" class="registro_form" onsubmit="return validarFormularioRegistroVideojuego()">
-        <input type="text" autocomplete="off" class="input_form" placeholder="Nombre" id="nombre" name="nombre" />
-        <input type="text" autocomplete="off" placeholder="Descripcion" class="input_form" id="descripcion" name="descripcion" />
-        <input type="text" autocomplete="off" placeholder="Genero" class="input_form" id="genero" name="genero" />
-        <input type="text" autocomplete="off" placeholder="Consola" class="input_form" id="consola" name="consola" />
-        <input type="number" autocomplete="off" placeholder="Año" class="input_form" id="anio" name="anio" />
-        <input type="number" autocomplete="off" placeholder="Estrellas" class="input_form" id="estrellas" name="estrellas" />
-        <input type="number" autocomplete="off" placeholder="Empresa" class="input_form" id="empresa_id" name="empresa_id" />
+        <input type="text" autocomplete="off" class="input_form" placeholder="Nombre" id="nombre" name="nombre" required/>
+        <input type="text" autocomplete="off" placeholder="Descripcion" class="input_form" id="descripcion" name="descripcion" required/>
+        <input type="text" autocomplete="off" placeholder="Genero" class="input_form" id="genero" name="genero" required/>
+        <input type="text" autocomplete="off" placeholder="Consola" class="input_form" id="consola" name="consola" required/>
+        <input type="number" autocomplete="off" placeholder="Año" class="input_form" id="anio" name="anio" min="1952" max="2024" required/>
+        <input type="number" autocomplete="off" placeholder="Estrellas" class="input_form" id="estrellas" name="estrellas" min="1" max="5" required/>
+        <input type="number" autocomplete="off" placeholder="Empresa" class="input_form" id="empresa_id" name="empresa_id" min="1" max="15" required/>
         <input type="submit" value="Registrar juego" class="btn_form" />
         <a href="../pages/mostrarvideojuego.php" class="form_link">Administrador de juegos</a>
       </form>

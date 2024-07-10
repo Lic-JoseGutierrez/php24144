@@ -1,9 +1,9 @@
 <?php
 session_start();
 if (!isset($_SESSION['usuario'])) {
-     
-    header('Location: ../pages/login.php');
-    exit();
+
+  header('Location: ../pages/login.php');
+  exit();
 }
 ?>
 <!DOCTYPE html>
@@ -50,14 +50,14 @@ if (isset($id) && $usuario == "admin" && $claveUsuario == "123456") {
       die("ERROR: No se pudo conectar a la base de datos: " . mysqli_connect_error());
     }
 
-    $id_videojuego = mysqli_real_escape_string($conexion, $_POST['id_videojuego']);
-    $nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
-    $descripcion = mysqli_real_escape_string($conexion, $_POST['descripcion']);
-    $genero = mysqli_real_escape_string($conexion, $_POST['genero']);
-    $consola = mysqli_real_escape_string($conexion, $_POST['consola']);
-    $anio = mysqli_real_escape_string($conexion, $_POST['anio']);
-    $estrellas = mysqli_real_escape_string($conexion, $_POST['estrellas']);
-    $empresa_id = mysqli_real_escape_string($conexion, $_POST['empresa_id']);
+    $id_videojuego = $_POST['id_videojuego'];
+    $nombre = $_POST['nombre'];
+    $descripcion = $_POST['descripcion'];
+    $genero = $_POST['genero'];
+    $consola = $_POST['consola'];
+    $anio = $_POST['anio'];
+    $estrellas = $_POST['estrellas'];
+    $empresa_id = $_POST['empresa_id'];
 
     $consulta = "UPDATE videojuegos SET 
             nombre='$nombre', 

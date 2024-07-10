@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-07-2024 a las 02:23:01
+-- Tiempo de generación: 10-07-2024 a las 23:13:11
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -69,21 +69,20 @@ CREATE TABLE `usuarios` (
   `fechaNacimiento` varchar(10) NOT NULL,
   `pais` varchar(30) NOT NULL,
   `telefono` int(11) NOT NULL,
-  `dni` int(11) NOT NULL,
-  `edad` smallint(6) NOT NULL
+  `dni` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `email`, `password`, `fechaNacimiento`, `pais`, `telefono`, `dni`, `edad`) VALUES
-(1, 'Admin', 'Admin', 'admin@insert-coin.com', '123456', '2000-01-01', 'Argentina', 111111, 111111, 24),
-(2, 'Adrian', 'Cairoli', 'adrian@insert-coin.com', '222222', '2000-01-01', 'Argentina', 222222, 222222, 24),
-(3, 'Juan Pablo', 'Piva', 'juan@insert-coin.com', '333333', '2000-01-01', 'Argentina', 333333, 333333, 24),
-(4, 'Walter', 'Ciancio', 'walter@insert-coin.com', '444444', '2000-01-01', 'Argentina', 444444, 444444, 24),
-(5, 'Nicolas', 'Pradines', 'nicolas@insert-coin.com', '555555', '2000-01-01', 'Argentina', 555555, 555555, 24),
-(6, 'Jose', 'Gutierrez', 'jose@insert-coin.com', '666666', '2000-01-01', 'Argentina', 666666, 666666, 24);
+INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `email`, `password`, `fechaNacimiento`, `pais`, `telefono`, `dni`) VALUES
+(1, 'Admin', 'Admin', 'admin@insert-coin.com', '123456', '2000-01-01', 'Argentina', 11111111, 1111111111),
+(2, 'Adrian', 'Cairoli', 'adrian@insert-coin.com', '222222', '2000-01-01', 'Argentina', 22222222, 222222222),
+(3, 'Juan Pablo', 'Piva', 'juan@insert-coin.com', '333333', '2000-01-01', 'Argentina', 33333333, 333333333),
+(4, 'Walter', 'Ciancio', 'walter@insert-coin.com', '444444', '2000-01-01', 'Argentina', 44444444, 444444444),
+(5, 'Nicolas', 'Pradines', 'nicolas@insert-coin.com', '555555', '2000-01-01', 'Argentina', 55555555, 55555555),
+(6, 'Jose', 'Gutierrez', 'jose@insert-coin.com', '666666', '2000-01-01', 'Argentina', 66666666, 66666666);
 
 -- --------------------------------------------------------
 
@@ -168,7 +167,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `videojuegos`
 --
 ALTER TABLE `videojuegos`
-  MODIFY `id_videojuego` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_videojuego` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Restricciones para tablas volcadas

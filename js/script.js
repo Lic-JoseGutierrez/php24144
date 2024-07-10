@@ -23,10 +23,9 @@ function validarFormularioRegistro() {
     let pais = document.getElementById("pais")
     let telefono = document.getElementById("telefono")
     let dni = document.getElementById("dni")
-    let edad = document.getElementById("edad")
     let terms = document.getElementById("terms")
 
-    if (nombre.value === '' || apellido.value === '' || email.value === '' || password.value === '' || fechaNacimiento.value === '' || pais.value === '' || telefono.value === '' || dni.value === '' || edad.value === '' || !terms.checked) {
+    if (nombre.value === '' || apellido.value === '' || email.value === '' || password.value === '' || fechaNacimiento.value === '' || pais.value === '' || telefono.value === '' || dni.value === '' || !terms.checked) {
         Swal.fire({
             title: "Atención!",
             text: "Por favor complete todos los campos y acepte los términos y condiciones!",

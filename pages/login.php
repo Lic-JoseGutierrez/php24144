@@ -31,8 +31,8 @@
         <section class="container_registro_form">
             <h1 class="registro_form_titulo">Cuenta</h1>
             <form action="login1.php" method="post" class="registro_form" onsubmit="return validarFormularioLogin()">
-                <input type="email" name="email" autocomplete="off" placeholder="Email" class="input_form" id="email" />
-                <input type="password" name="password" autocomplete="off" placeholder="Password" class="input_form" id="password" />
+                <input type="email" name="email" autocomplete="off" placeholder="Email" class="input_form" id="email" required/>
+                <input type="password" name="password" autocomplete="off" placeholder="Password" class="input_form" id="password" required/>
                 <input type="submit" value="Iniciar Sesión" class="btn_form" />
                 <a href="./registro.php" class="form_link">Registrarse</a>
             </form>

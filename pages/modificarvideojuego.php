@@ -80,13 +80,13 @@ mysqli_close($conexion);
 
       <form action="modificarvideojuego2.php" method="post" class="registro_form" onsubmit="return validarFormularioRegistroVideojuego()">
         <input type="hidden" name="id_videojuego" value="<?php echo $datos['id_videojuego']; ?>" />
-        <input type="text" autocomplete="off" class="input_form" placeholder="Nombre" id="nombre" name="nombre" value="<?php echo $datos['nombre']; ?>" />
-        <input type="text" autocomplete="off" placeholder="Descripcion" class="input_form" id="descripcion" name="descripcion" value="<?php echo $datos['descripcion']; ?>" />
-        <input type="text" autocomplete="off" placeholder="Genero" class="input_form" id="genero" name="genero" value="<?php echo $datos['genero']; ?>" />
-        <input type="text" autocomplete="off" placeholder="Consola" class="input_form" id="consola" name="consola" value="<?php echo $datos['consola']; ?>" />
-        <input type="number" autocomplete="off" placeholder="Año" class="input_form" id="anio" name="anio" value="<?php echo $datos['anio']; ?>" />
-        <input type="number" autocomplete="off" placeholder="Estrellas" class="input_form" id="estrellas" name="estrellas" value="<?php echo $datos['estrellas']; ?>" />
-        <input type="number" autocomplete="off" placeholder="Empresa" class="input_form" id="empresa_id" name="empresa_id" value="<?php echo $datos['empresa_id']; ?>" />
+        <input type="text" autocomplete="off" class="input_form" placeholder="Nombre" id="nombre" name="nombre" value="<?php echo $datos['nombre']; ?>" require/>
+        <input type="text" autocomplete="off" placeholder="Descripcion" class="input_form" id="descripcion" name="descripcion" value="<?php echo $datos['descripcion']; ?>" require/>
+        <input type="text" autocomplete="off" placeholder="Genero" class="input_form" id="genero" name="genero" value="<?php echo $datos['genero']; ?>" require/>
+        <input type="text" autocomplete="off" placeholder="Consola" class="input_form" id="consola" name="consola" value="<?php echo $datos['consola']; ?>" require/>
+        <input type="number" autocomplete="off" placeholder="Año" class="input_form" id="anio" name="anio" value="<?php echo $datos['anio']; ?>" min="1952" max="2024" required/>
+        <input type="number" autocomplete="off" placeholder="Estrellas" class="input_form" id="estrellas" name="estrellas" value="<?php echo $datos['estrellas']; ?>" min="1" max="5" required/>
+        <input type="number" autocomplete="off" placeholder="Empresa" class="input_form" id="empresa_id" name="empresa_id" value="<?php echo $datos['empresa_id']; ?>" min="1" max="15" required/>
         <input type="submit" value="Modificar juego" class="btn_form" />
       </form>
     </section>
